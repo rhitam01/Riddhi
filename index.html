@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Riddhi Das — Marketing Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#110e0b;
+  --bg2:#181410;
+  --bg3:#201a14;
+  --bg4:#28211a;
+  --blush:#c8a090;
+  --blush-l:#dbb8a8;
+  --blush-d:#8a6255;
+  --blush-dim:rgba(200,160,144,0.09);
+  --blush-border:rgba(200,160,144,0.18);
+  --cream:#f4ede6;
+  --muted:#9a8878;
+  --dim:#5a4a3c;
+  --dimmer:#342820;
+  --border:rgba(244,237,230,0.07);
+  --border2:rgba(244,237,230,0.04);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;overflow-x:hidden;}
+body::before{
+  content:'';position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse 55% 40% at 95% 5%,rgba(200,160,144,0.055) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 30% at 5% 95%,rgba(200,160,144,0.035) 0%,transparent 65%);
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 3.5rem;height:54px;
+  background:rgba(17,14,11,0.96);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(16px);
+}
+.nav-logo{
+  font-family:'Syne',sans-serif;font-size:0.85rem;
+  color:var(--cream);letter-spacing:0.2em;text-transform:uppercase;font-weight:700;
+}
+.nav-logo span{color:var(--blush-l);}
+nav ul{display:flex;gap:2.5rem;list-style:none;}
+nav a{
+  color:var(--muted);text-decoration:none;
+  font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;
+  transition:color 0.2s;
+}
+nav a:hover{color:var(--blush-l);}
+
+#hero{padding:6.5rem 3.5rem 3rem;max-width:1040px;margin:0 auto;}
+.tag-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.tag-pill{
+  font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--blush-l);font-weight:600;
+  border:1px solid var(--blush-border);
+  background:var(--blush-dim);
+  padding:0.25rem 0.8rem;border-radius:100px;
+}
+.tag-sep{width:4px;height:4px;border-radius:50%;background:var(--dim);}
+.tag-plain{font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+
+h1{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(3.2rem,7vw,5.6rem);
+  line-height:1;font-weight:400;letter-spacing:-0.01em;margin-bottom:1.2rem;
+}
+h1 em{font-style:italic;color:var(--blush-l);}
+.hero-desc{
+  font-size:0.92rem;color:var(--muted);max-width:510px;
+  line-height:1.88;font-weight:400;margin-bottom:2rem;
+  padding-left:1.1rem;border-left:1px solid var(--blush-d);
+}
+.cta-row{display:flex;gap:0.85rem;flex-wrap:wrap;margin-bottom:3rem;}
+.btn-p{
+  background:var(--blush);color:var(--bg);
+  padding:0.65rem 1.85rem;border:none;border-radius:3px;
+  font-family:'Syne',sans-serif;font-size:0.7rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;
+  transition:background 0.2s;text-decoration:none;display:inline-block;
+}
+.btn-p:hover{background:var(--blush-l);}
+.btn-s{
+  background:transparent;color:var(--muted);
+  padding:0.65rem 1.85rem;border:1px solid var(--border);border-radius:3px;
+  font-family:'Syne',sans-serif;font-size:0.7rem;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;
+  transition:color 0.2s,border-color 0.2s;text-decoration:none;display:inline-block;
+}
+.btn-s:hover{color:var(--blush-l);border-color:var(--blush-border);}
+
+.stats-row{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);border-radius:6px;overflow:hidden;
+}
+.stat-cell{padding:1.2rem 1.4rem;border-right:1px solid var(--border);}
+.stat-cell:last-child{border-right:none;}
+.stat-num{
+  font-family:'Instrument Serif',serif;
+  font-size:2.2rem;color:var(--blush-l);
+  display:block;font-weight:400;line-height:1;margin-bottom:0.35rem;
+}
+.stat-lbl{font-size:0.58rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;}
+
+.sec{padding:2.75rem 3.5rem;max-width:1040px;margin:0 auto;}
+.sec-head{
+  display:flex;align-items:center;gap:1.25rem;
+  margin-bottom:1.75rem;padding-bottom:0.85rem;
+  border-bottom:1px solid var(--border);
+}
+.sec-idx{font-size:0.6rem;color:var(--blush);letter-spacing:0.2em;font-weight:700;}
+h2{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.55rem,2.8vw,2.1rem);
+  font-weight:400;color:var(--cream);
+}
+h2 em{font-style:italic;color:var(--blush-l);}
+
+.about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:3.5rem;align-items:start;}
+.about-text p{font-size:0.88rem;color:var(--muted);line-height:1.92;margin-bottom:0.9rem;}
+.info-list{display:flex;flex-direction:column;}
+.info-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:0.7rem 0;border-bottom:1px solid var(--border2);gap:1rem;
+}
+.info-row:first-child{border-top:1px solid var(--border2);}
+.info-key{font-size:0.6rem;color:var(--blush-l);letter-spacing:0.16em;text-transform:uppercase;font-weight:700;white-space:nowrap;}
+.info-val{font-size:0.8rem;color:var(--muted);text-align:right;}
+
+.exp-item{
+  display:grid;grid-template-columns:185px 1fr;
+  gap:2rem;padding:1.6rem 0;
+  border-bottom:1px solid var(--border2);
+}
+.exp-item:last-child{border-bottom:none;}
+.exp-period{font-size:0.6rem;color:var(--dim);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-bottom:0.45rem;}
+.exp-co{font-size:0.86rem;color:var(--blush-l);font-weight:700;margin-bottom:0.2rem;}
+.exp-loc{font-size:0.68rem;color:var(--dimmer);}
+.exp-role{
+  font-family:'Instrument Serif',serif;
+  font-size:1.05rem;font-weight:400;font-style:italic;
+  color:var(--cream);margin-bottom:0.65rem;
+}
+.bullets{list-style:none;display:flex;flex-direction:column;gap:0.38rem;}
+.bullets li{
+  font-size:0.81rem;color:var(--muted);line-height:1.72;
+  padding-left:1.1rem;position:relative;
+}
+.bullets li::before{
+  content:'–';position:absolute;left:0;
+  color:var(--blush-d);top:0;
+}
+.num{
+  font-family:'Syne',sans-serif;font-size:0.84rem;font-weight:700;
+  color:var(--blush-l);
+  background:var(--blush-dim);
+  border:1px solid var(--blush-border);
+  padding:0.04rem 0.32rem;border-radius:3px;
+}
+.badge-current{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  margin-top:0.6rem;
+  background:var(--blush-dim);border:1px solid var(--blush-border);
+  color:var(--blush-l);font-size:0.6rem;padding:0.22rem 0.7rem;
+  border-radius:100px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+}
+.badge-current::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:var(--blush-l);display:block;
+}
+
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
+.skill-card{background:var(--bg);padding:1.15rem 1.3rem;transition:background 0.2s;}
+.skill-card:hover{background:var(--bg2);}
+.skill-head{
+  font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--blush-l);font-weight:700;margin-bottom:0.6rem;
+}
+.tags{display:flex;flex-wrap:wrap;gap:0.3rem;}
+.tag-s{
+  font-size:0.66rem;color:var(--muted);
+  background:var(--bg2);border:1px solid var(--border);
+  padding:0.18rem 0.5rem;border-radius:3px;font-weight:500;
+}
+
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:1px;}
+.cert-card{background:var(--bg);padding:1rem 1.3rem;}
+.cert-by{font-size:0.6rem;color:var(--blush-l);letter-spacing:0.14em;text-transform:uppercase;font-weight:700;margin-bottom:0.3rem;}
+.cert-name{font-size:0.8rem;color:var(--muted);}
+
+#contact{padding:2.75rem 3.5rem 4rem;max-width:1040px;margin:0 auto;text-align:center;}
+.contact-sub{font-size:0.88rem;color:var(--muted);max-width:420px;margin:0 auto 1.75rem;line-height:1.9;}
+.contact-links{
+  display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;
+  margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--border);
+}
+.contact-link{
+  font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--dim);text-decoration:none;font-weight:600;transition:color 0.2s;
+}
+.contact-link:hover{color:var(--blush-l);}
+
+footer{
+  text-align:center;padding:1.2rem 3.5rem;
+  border-top:1px solid var(--border2);
+  font-size:0.6rem;color:var(--dimmer);
+  letter-spacing:0.12em;text-transform:uppercase;font-weight:600;
+}
+
+@media(max-width:720px){
+  nav{padding:0 1.5rem;}
+  #hero,.sec,#contact{padding-left:1.5rem;padding-right:1.5rem;}
+  h1{font-size:2.8rem;}
+  .stats-row{grid-template-columns:1fr 1fr;}
+  .stat-cell:nth-child(2){border-right:none;}
+  .stat-cell:nth-child(3){border-top:1px solid var(--border);}
+  .stat-cell:nth-child(4){border-top:1px solid var(--border);}
+  .about-grid{grid-template-columns:1fr;}
+  .skills-grid,.cert-grid{grid-template-columns:1fr;background:none;}
+  .skill-card,.cert-card{border-bottom:1px solid var(--border);}
+  .exp-item{grid-template-columns:1fr;gap:0.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Riddhi<span>.</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="tag-row">
+    <span class="tag-pill">Open to Opportunities</span>
+    <span class="tag-sep"></span>
+    <span class="tag-plain">Marketing Professional</span>
+  </div>
+  <h1>Riddhi <em>Das</em></h1>
+  <p class="hero-desc">Data-driven marketing strategist delivering measurable growth through SEO, organic content, and digital campaign strategy — across global markets.</p>
+  <div class="cta-row">
+    <a href="#experience" class="btn-p">View Experience</a>
+    <a href="#contact" class="btn-s">Get in Touch</a>
+  </div>
+  <div class="stats-row">
+    <div class="stat-cell"><span class="stat-num">30%</span><span class="stat-lbl">Avg. Engagement Lift</span></div>
+    <div class="stat-cell"><span class="stat-num">96%</span><span class="stat-lbl">Social Media Growth</span></div>
+    <div class="stat-cell"><span class="stat-num">60+</span><span class="stat-lbl">Organic Leads / Month</span></div>
+    <div class="stat-cell"><span class="stat-num">34K+</span><span class="stat-lbl">Viral View Growth</span></div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="sec-head"><span class="sec-idx">01</span><h2>About <em>Me</em></h2></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>A Marketing professional with a B.Com (Hons) in Accounting & Finance from the University of Calcutta. I bridge analytical thinking with creative execution — using data to drive campaigns that actually move the needle.</p>
+      <p>From growing social channels <strong style="color:var(--cream);font-weight:500;">96% organically</strong> to generating <strong style="color:var(--cream);font-weight:500;">60+ monthly leads</strong> through SEO and content, I've delivered measurable impact across the US, Italy, Libya, and India.</p>
+    </div>
+    <div class="info-list">
+      <div class="info-row"><span class="info-key">Education</span><span class="info-val">B.Com (Hons) · Univ. of Calcutta · 2025</span></div>
+      <div class="info-row"><span class="info-key">Location</span><span class="info-val">India · Remote & On-site</span></div>
+      <div class="info-row"><span class="info-key">Languages</span><span class="info-val">English · Hindi · Bengali</span></div>
+      <div class="info-row"><span class="info-key">Email</span><span class="info-val" style="color:var(--blush-l);">riddhid272@gmail.com</span></div>
+      <div class="info-row"><span class="info-key">Phone</span><span class="info-val">+91 98746 42540</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="experience">
+  <div class="sec-head"><span class="sec-idx">02</span><h2>Work <em>Experience</em></h2></div>
+
+  <div class="exp-item">
+    <div><div class="exp-period">Mar 2025 – Present</div><div class="exp-co">Skull Shaver</div><div class="exp-loc">South Dakota, USA</div></div>
+    <div>
+      <div class="exp-role">Content & Social Media Executive</div>
+      <ul class="bullets">
+        <li>Increased engagement by <span class="num">30%</span> and website traffic by <span class="num">25%</span> through optimised content strategy.</li>
+        <li>Managed <span class="num">100+</span> monthly interactions with a <span class="num">95%</span> response rate, improving retention by <span class="num">20%</span>.</li>
+        <li>Boosted campaign effectiveness by <span class="num">15%</span> through trend analysis and performance reporting.</li>
+      </ul>
+      <div class="badge-current">Current Role</div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div><div class="exp-period">Apr 2025 – Mar 2026</div><div class="exp-co">Maitri Global Education</div><div class="exp-loc">Florence, Italy</div></div>
+    <div>
+      <div class="exp-role">Marketing Lead</div>
+      <ul class="bullets">
+        <li>Achieved <span class="num">96%</span> social media growth, doubling post reach and boosting engagement by <span class="num">70%</span> organically.</li>
+        <li>Generated <span class="num">60+</span> organic leads per month via content creation, SEO, and engagement initiatives.</li>
+        <li>Drove <span class="num">40%+</span> increase in organic website traffic through GEO & SEO implementation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div><div class="exp-period">Jan – Jun 2025</div><div class="exp-co">Qabas</div><div class="exp-loc">Tripoli, Libya</div></div>
+    <div>
+      <div class="exp-role">Junior Market Researcher</div>
+      <ul class="bullets">
+        <li>Conducted market research and competitor analysis using data analytics and consumer behaviour insights.</li>
+        <li>Improved targeting accuracy and guided strategic marketing decisions through actionable reporting.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div><div class="exp-period">Feb – Apr 2025</div><div class="exp-co">SnaGHustle</div><div class="exp-loc">Hyderabad, India</div></div>
+    <div>
+      <div class="exp-role">Social Media Marketing Intern</div>
+      <ul class="bullets">
+        <li>Achieved <span class="num">34K+</span> view growth through viral content strategy, SEO optimisation, and influencer collaborations.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div><div class="exp-period">Oct – Dec 2024</div><div class="exp-co">QodeIt</div><div class="exp-loc">Bangalore, India</div></div>
+    <div>
+      <div class="exp-role">Social Media Marketing Intern</div>
+      <ul class="bullets">
+        <li>Optimised brand presence across Facebook, Instagram, and LinkedIn to boost visibility and engagement.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div><div class="exp-period">Jun – Jul 2024</div><div class="exp-co">Forward Media Group</div><div class="exp-loc">Kolkata, India</div></div>
+    <div>
+      <div class="exp-role">Content Writing Intern</div>
+      <ul class="bullets">
+        <li>Gained hands-on expertise in SEO writing, copywriting, and editorial techniques through live projects.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div><div class="exp-period">Aug 2023 – Jul 2024</div><div class="exp-co">Chegg India</div><div class="exp-loc">India</div></div>
+    <div>
+      <div class="exp-role">Subject Matter Expert</div>
+      <ul class="bullets">
+        <li>Delivered expert academic support to <span class="num">100+</span> students in Business and Marketing Management.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills">
+  <div class="sec-head"><span class="sec-idx">03</span><h2>Skills & <em>Expertise</em></h2></div>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-head">Digital Marketing</div><div class="tags"><span class="tag-s">SEO / GEO</span><span class="tag-s">Campaign Strategy</span><span class="tag-s">KPIs & Metrics</span><span class="tag-s">STP Framework</span></div></div>
+    <div class="skill-card"><div class="skill-head">Content & Social</div><div class="tags"><span class="tag-s">Content Creation</span><span class="tag-s">Copywriting</span><span class="tag-s">Instagram</span><span class="tag-s">LinkedIn</span></div></div>
+    <div class="skill-card"><div class="skill-head">Research & Analytics</div><div class="tags"><span class="tag-s">Market Research</span><span class="tag-s">Competitor Analysis</span><span class="tag-s">Data Analytics</span></div></div>
+    <div class="skill-card"><div class="skill-head">Business Acumen</div><div class="tags"><span class="tag-s">CRM</span><span class="tag-s">Financial Acumen</span><span class="tag-s">Project Planning</span></div></div>
+    <div class="skill-card"><div class="skill-head">Tech & Automation</div><div class="tags"><span class="tag-s">Automation Tools</span><span class="tag-s">E-filing</span><span class="tag-s">Website Platforms</span></div></div>
+    <div class="skill-card"><div class="skill-head">Soft Skills</div><div class="tags"><span class="tag-s">Problem-Solving</span><span class="tag-s">Team Collaboration</span><span class="tag-s">Time Management</span></div></div>
+  </div>
+  <div class="sec-head" style="margin-top:2rem;margin-bottom:0;"><span class="sec-idx">04</span><h2><em>Certifications</em></h2></div>
+  <div class="cert-grid">
+    <div class="cert-card"><div class="cert-by">Infosys</div><div class="cert-name">Certificate on Capital Markets</div></div>
+    <div class="cert-card"><div class="cert-by">Infosys</div><div class="cert-name">Certificate on Retail</div></div>
+    <div class="cert-card"><div class="cert-by">McKinsey & Company</div><div class="cert-name">McKinsey Forward Programme</div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sec-head" style="justify-content:center;border-bottom:none;margin-bottom:1rem;"><span class="sec-idx">05</span><h2>Get in <em>Touch</em></h2></div>
+  <p class="contact-sub">Actively seeking marketing roles where I can bring data-driven strategy, creative energy, and measurable impact to a forward-thinking team.</p>
+  <a href="mailto:riddhid272@gmail.com" class="btn-p">riddhid272@gmail.com</a>
+  <div class="contact-links">
+    <a href="tel:+919874642540" class="contact-link">+91 98746 42540</a>
+    <a href="#" class="contact-link">LinkedIn</a>
+    <a href="#" class="contact-link">Kolkata, India</a>
+  </div>
+</section>
+
+<footer>© 2026 Riddhi Das</footer>
+
+</body>
+</html>
